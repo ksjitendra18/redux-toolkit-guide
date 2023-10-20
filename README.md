@@ -1,7 +1,7 @@
 # About
 This is the repository for blog post [React Redux Toolkit Setup: Building Ecommerce App with Cart Actions](https://everythingcs.dev/blog/react-ecommerce-cart-actions-global-state-redux-toolkit/).
 
-## About Project
+Starter code branch contains the starter file for this project.
 
 I have developed a basic ecommerce app with cart actions like adding item to cart, increasing and decreasing quantity, removing items from cart etc. using Redux Toolkit.
 
