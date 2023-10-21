@@ -1,9 +1,20 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { RootState } from "../store/store";
 const Navbar = () => {
   const [mobileNavActive, setMobileNavActive] = useState(false);
 
-  const cartCount = 0;
+  const cartItems = useSelector((state: RootState) => state.cartReducer.cart);
+
+  const getQuantity = () => {
+    let quantity = 0;
+    cartItems.forEach((item) => (quantity += item.quantity));
+    return quantity;
+  };
+
+  const cartCount = getQuantity();
+
   return (
     <header className="relative h-[80px]  ">
       <div className="h-full max-w-7xl mx-auto flex justify-between items-center py-2 px-3">
@@ -29,7 +40,7 @@ const Navbar = () => {
               <Link className="flex items-center" to="/cart">
                 Cart
                 {cartCount > 0 && (
-                  <span className="ml-2 py-[3px] px-[6px] text-orange-500 text-sm font-bold rounded-full bg-white">
+                  <span className="ml-2 py-[2px] px-[8px] text-orange-500 text-sm font-bold rounded-full bg-white">
                     {cartCount}
                   </span>
                 )}
