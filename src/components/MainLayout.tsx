@@ -5,7 +5,7 @@ const MainLayout = () => {
   return (
     <>
       <Navbar />
-      <Toaster position="top-right" />
+      <Toaster position="top-center" />
       <main className="max-w-7xl mx-auto px-3">
         <Outlet />
       </main>
