@@ -8,11 +8,11 @@ import {
 } from "../store/cart/cartSlice";
 import CartProduct from "../types/CartProduct";
 
-interface CartItemsCardProps {
+interface CartItemCardProps {
   product: CartProduct;
 }
 
-const CartItemsCard: React.FC<CartItemsCardProps> = ({ product }) => {
+const CartItemCard: React.FC<CartItemCardProps> = ({ product }) => {
   const dispatch = useDispatch();
 
   const onIncreaseQuantity = (productId: number) => {
@@ -76,4 +76,4 @@ const CartItemsCard: React.FC<CartItemsCardProps> = ({ product }) => {
   );
 };
 
-export default CartItemsCard;
+export default CartItemCard;

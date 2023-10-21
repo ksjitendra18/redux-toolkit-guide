@@ -1,13 +1,13 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
-import CartItemsCard from "../components/CartItemsCard";
+import CartItemCard from "../components/CartItemCard";
 import OrderValue from "../components/OrderValue";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const cartItem = useSelector((state: RootState) => state.cartReducer.cart);
+  const cartItems = useSelector((state: RootState) => state.cartReducer.cart);
 
-  if (cartItem && cartItem.length < 1) {
+  if (cartItems && cartItems.length < 1) {
     return (
       <div className="h-72 flex flex-col items-center justify-center">
         <h2 className="text-3xl mt-10 mb-5 font-bold">Cart is Empty</h2>
@@ -24,8 +24,8 @@ const Cart = () => {
   return (
     <div className=" flex  flex-col-reverse md:flex-row  gap-10 items-center md:items-start md:select-none md:justify-between">
       <div className="flex flex-wrap flex-col md:flex-row mb-10  gap-10 ">
-        {cartItem?.map((item) => (
-          <CartItemsCard product={item} />
+        {cartItems?.map((item) => (
+          <CartItemCard product={item} />
         ))}
       </div>
 
