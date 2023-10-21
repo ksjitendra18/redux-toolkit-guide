@@ -2,11 +2,11 @@ import { Minus, Plus, X } from "lucide-react";
 import React from "react";
 import CartProduct from "../types/CartProduct";
 
-interface CartItemsCardProps {
+interface CartItemCardProps {
   product: CartProduct;
 }
 
-const CartItemCard: React.FC<CartItemsCardProps> = ({ product }) => {
+const CartItemCard: React.FC<CartItemCardProps> = ({ product }) => {
   const onIncreaseQuantity = (productId: number) => {};
 
   const onDecreaseQuantity = (productId: number) => {};
