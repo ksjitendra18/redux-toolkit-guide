@@ -19,9 +19,7 @@ const Shop = () => {
     return (
       <>
         <section>
-          <h2 className="my-10 text-center text-2xl font-bold">
-            Featured Items
-          </h2>
+          <h2 className="my-10 text-center text-2xl font-bold">Shop</h2>
 
           <PageLoading />
         </section>
